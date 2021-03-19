@@ -1,13 +1,25 @@
-export const getProducts = (req, res) => {
-    res.json('get products')
+import Product from '../models/product';
+
+export const createProduct = async (req, res) => {
+
+    const { name, category, price, imgUrl } = req.body;
+
+    const newProduct = new Product({ name, category, price, imgUrl });
+
+    const productSaved = await newProduct.save();
+    
+    res.status(201).json(productSaved);
+}
+
+export const getProducts = async (req, res) => {
+
+    const products = await Product.find();
+
+    res.json(products);
 }
 
 export const updateProduct = (req, res) => {
     res.json('update product')
-}
-
-export const createProduct = (req, res) => {
-    res.json('create product')
 }
 
 export const getProductById = (req, res) => {

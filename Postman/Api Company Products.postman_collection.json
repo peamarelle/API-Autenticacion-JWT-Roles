@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "5cc083c0-948e-47a5-ab43-006a89641c4c",
+		"name": "Api Company Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Save product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"_id\": \"605407f340bc9e39749e20a0\",\r\n        \"name\": \"Think in Java\",\r\n        \"category\": \"Libro\",\r\n        \"price\": 3000,\r\n        \"imgUrl\": \"https://http2.mlstatic.com/D_NQ_NP_764782-MLA41780347095_052020-O.webp\",\r\n        \"createdAt\": \"2021-03-19T02:09:55.240Z\",\r\n        \"updatedAt\": \"2021-03-19T02:09:55.240Z\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": []
+		}
+	]
+}
