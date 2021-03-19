@@ -1,7 +1,10 @@
 import mongoose from 'mongoose'
-import keys from './keys'
+import dotenv from 'dotenv'
 
-mongoose.connect(keys.URI,
+dotenv.config();
+const URI = process.env.URI;
+
+mongoose.connect(URI,
     {  useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false,
